@@ -1,3 +1,5 @@
+package dto.com.jojoldu.book.springboot.web;
+
 import com.jojoldu.book.springboot.Application;
 import com.jojoldu.book.springboot.web.HelloController;
 import org.junit.Test;
