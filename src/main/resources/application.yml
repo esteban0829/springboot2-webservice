@@ -5,3 +5,5 @@ spring:
   output:
     ansi:
       enabled: always
+  profiles:
+    include: oauth

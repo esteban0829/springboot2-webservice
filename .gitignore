@@ -4,3 +4,6 @@
 build/
 out/
 gradle/
+
+# not inclue google oauth credential information file to git
+src/main/resources/application-oauth.yml
