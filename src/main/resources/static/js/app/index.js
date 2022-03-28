@@ -6,6 +6,9 @@ var main = {
         });
         $('#btn-update').on('click', function () {
             _this.update()
+        });
+        $('#btn-delete').on('click', function () {
+            _this.delete()
         })
     },
     save: function () {
@@ -45,7 +48,22 @@ var main = {
             alert('글이 수정 되었습니다.');
             window.location.href = '/';
         }).fail(function (error) {
-           alert(JSON.stringify(error))
+           alert(JSON.stringify(error));
+        });
+    },
+    delete: function () {
+        var id = $('#id').val();
+
+        $.ajax({
+            type: 'DELETE',
+            url: '/api/v1/posts/' + id,
+            dataType: 'json',
+            contentType: 'application/json; charset=urf-8'
+        }).done(function (){
+            alert('글이 삭제 되었습니다.');
+            window.location.href = '/';
+        }).fail(function (error) {
+            alert("왜 이것만 뜨지 : " + JSON.stringify(error));
         });
     }
 };
