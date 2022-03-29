@@ -7,3 +7,5 @@ spring:
       enabled: always
   profiles:
     include: oauth
+  session:
+    store-type: jdbc
